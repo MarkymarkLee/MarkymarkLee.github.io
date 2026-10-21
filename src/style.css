@@ -379,6 +379,11 @@ main {
 .prose {
   max-width: 70ch;
 }
+/* Blog and CV read as a centred column. */
+.narrow {
+  max-width: 70ch;
+  margin: 0 auto;
+}
 .prose img {
   max-width: 100%;
   height: auto;
@@ -468,18 +473,6 @@ pre.shiki {
   border-bottom: 2px solid var(--surface0);
   padding-bottom: 4px;
 }
-.print-button {
-  float: right;
-  font: inherit;
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  background: none;
-  color: var(--text);
-  border: 2px solid var(--surface1);
-  padding: 4px 12px;
-  cursor: pointer;
-}
-
 @media print {
   @page {
     size: A4;
@@ -498,15 +491,15 @@ pre.shiki {
     line-height: 1.45;
   }
   .site-header,
-  .site-footer,
-  .no-print {
+  .site-footer {
     display: none !important;
   }
   main {
     padding: 0;
   }
   .wrap,
-  .prose {
+  .prose,
+  .narrow {
     max-width: none;
     padding: 0;
   }

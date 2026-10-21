@@ -225,7 +225,7 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     path: "/cv/",
     title: "CV",
     description: `CV of ${site.name}`,
-    body: `<button class="print-button no-print" type="button" onclick="print()">Print / PDF</button><article class="prose cv">${c.cv}</article>`,
+    body: `<article class="prose narrow cv">${c.cv}</article>`,
   });
 
   page("projects/index.html", {
@@ -254,14 +254,14 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     path: "/blog/",
     title: "Blog",
     description: `Writing by ${site.name}`,
-    body: `<div class="page-head"><h1>Blog</h1><p>Notes and write-ups. <a href="/rss.xml">RSS</a></p></div><ul class="list">${c.posts.map(postItem).join("")}</ul>`,
+    body: `<div class="narrow"><div class="page-head"><h1>Blog</h1><p>Notes and write-ups. <a href="/rss.xml">RSS</a></p></div><ul class="list">${c.posts.map(postItem).join("")}</ul></div>`,
   });
   for (const p of c.posts) {
     page(`blog/${p.slug}/index.html`, {
       path: `/blog/${p.slug}/`,
       title: p.title,
       description: p.description,
-      body: `<div class="page-head"><h1>${esc(p.title)}</h1><p><time class="date" datetime="${p.date}">${fmtDate(p.date)}</time> ${p.draft ? '<span class="draft-badge">draft</span>' : ""}</p>${tags(p.tags)}</div><article class="prose">${p.html}</article>`,
+      body: `<div class="narrow"><div class="page-head"><h1>${esc(p.title)}</h1><p><time class="date" datetime="${p.date}">${fmtDate(p.date)}</time> ${p.draft ? '<span class="draft-badge">draft</span>' : ""}</p>${tags(p.tags)}</div><article class="prose">${p.html}</article></div>`,
     });
     await copyAssets(files, p.assetDir, `blog/${p.slug}`);
   }
