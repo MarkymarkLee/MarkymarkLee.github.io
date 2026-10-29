@@ -46,6 +46,28 @@ describe("content build", () => {
     expect(c.posts[0].slug).toBe("secret");
   });
 
+  it("tags project cards with category and month, and rejects unknown categories", async () => {
+    const root = await fixture();
+    await mkdir(join(root, "projects"));
+    await writeFile(
+      join(root, "projects", "jam.md"),
+      "---\ntitle: Jam\ndate: 2024-05-01\ncategory: hackathon\n---\n",
+    );
+    await writeFile(
+      join(root, "projects", "old-star.md"),
+      "---\ntitle: Starred\ndate: 2020-01-01\ncategory: course\nfeatured: true\n---\n",
+    );
+    const c = await loadContent(root);
+    expect(c.projects.map((p) => p.slug)).toEqual(["old-star", "jam"]);
+    const page = (await renderSite(c, assets)).get("projects/index.html");
+    expect(page).toContain('<span class="category hackathon">Hackathons</span>');
+    expect(page).toContain("May 2024");
+    expect(page).toContain("★");
+
+    await writeFile(join(root, "projects", "bad.md"), "---\ntitle: Bad\ncategory: hobby\n---\n");
+    await expect(loadContent(root)).rejects.toThrow(/category must be one of/);
+  });
+
   it("rejects a bad date", async () => {
     const root = await fixture();
     await writeFile(join(root, "blog", "bad.md"), "---\ntitle: Bad\ndate: May 1\n---\n");

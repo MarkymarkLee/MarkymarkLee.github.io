@@ -24,9 +24,18 @@ export interface Post {
   assetDir?: string;
 }
 
+// Project categories -> the label on their tag.
+export const CATEGORIES = {
+  research: "Research",
+  personal: "Personal projects",
+  hackathon: "Hackathons",
+  course: "Course projects",
+};
+
 export interface Project {
   slug: string;
   title: string;
+  category: keyof typeof CATEGORIES;
   summary: string;
   date: string;
   stack: string[];
@@ -153,7 +162,13 @@ export async function loadContent(root: string, { drafts = false } = {}): Promis
   site.url = site.url.replace(/\/$/, "");
   site.socials = (site.socials ?? []).filter((s) => s.url);
 
-  const cv = await md.parse(splitFrontmatter(await read(join(root, "cv.md")), "cv.md").body);
+  // A role's heading and the italic dates line under it share one row, like the PDF CV.
+  const cv = (
+    await md.parse(splitFrontmatter(await read(join(root, "cv.md")), "cv.md").body)
+  ).replace(
+    /(<h3[^>]*>[\s\S]*?<\/h3>)\s*<p><em>((?:(?!<\/p>)[\s\S])*)<\/em><\/p>/g,
+    '<div class="cv-row">$1<p class="when">$2</p></div>',
+  );
 
   const posts: Post[] = [];
   for (const e of await entries(join(root, "blog"))) {
@@ -176,9 +191,13 @@ export async function loadContent(root: string, { drafts = false } = {}): Promis
   const projects: Project[] = [];
   for (const e of await entries(join(root, "projects"))) {
     const { data, body } = splitFrontmatter(await read(e.file), e.file);
+    const category = str(data, "category", e.file);
+    if (!(category in CATEGORIES))
+      throw new Error(`${e.file}: category must be one of ${Object.keys(CATEGORIES).join(", ")}`);
     projects.push({
       slug: e.slug,
       title: str(data, "title", e.file),
+      category: category as Project["category"],
       summary: str(data, "summary", e.file, false),
       date: str(data, "date", e.file, false),
       stack: list(data, "stack", e.file),
@@ -190,7 +209,8 @@ export async function loadContent(root: string, { drafts = false } = {}): Promis
       assetDir: e.assetDir,
     });
   }
-  projects.sort((a, b) => b.date.localeCompare(a.date));
+  // Starred (featured) projects first, then newest first.
+  projects.sort((a, b) => Number(b.featured) - Number(a.featured) || b.date.localeCompare(a.date));
 
   return { site, cv, posts, projects };
 }

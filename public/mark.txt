@@ -1,0 +1,61 @@
+MARK — what Claude knows (from this conversation, 2026-10-29)
+====================================================================
+
+IDENTITY & CONTACT
+- Full name: Pei Chen Lee. Goes by Mark Lee. (The LaTeX CV says "Markaa Lee", which looks like a typo.)
+- Email: mark.pc.lee@gmail.com
+- GitHub: MarkymarkLee (https://github.com/MarkymarkLee)
+- LinkedIn: markpclee (https://www.linkedin.com/in/markpclee/)
+- Personal site: https://markymarklee.github.io (this repo)
+
+EDUCATION
+- UC Berkeley: M.Eng. in EECS, Aug 2026 – May 2027 (expected). Now in Berkeley, CA.
+- National Taiwan University: B.S. in Computer Science & Information Engineering, Sep 2021 – Jan 2026.
+  GPA 4.2/4.3. 3 Academic Excellence Awards (2021-1, 2023-1, 2024-1), top 1% of the department.
+
+RESEARCH
+- Co-author of HeadTurner (CHI 2025): a device for comfortable VR/MR viewing while lying down.
+  Mark did the EMG analysis, ran user studies and wrote the related-work section.
+- NTU HCI Lab (Prof. Mike Y. Chen), Feb 2024 – May 2025.
+- Embodied AI Lab (Prof. Tsung-Wei Ke), Sep 2025 – Jan 2026: 3D pose estimation, scene generation, robot safety.
+
+WORK
+- Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026). Built a game backend
+  in Go and C# for elderly hospital users, deployed on GCP with CI/CD.
+- Uni-President Enterprises: AI Automation Engineer & Consultant (Feb–Apr 2026). Automated financial reporting
+  for 30 users, all processed locally.
+- A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
+  pipelines, an AI chatbot and a dashboard for real-time stock analytics.
+- Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
+- Teaching: Lead of Teaching at GDG NTU, TA for Computer System Lab (Excellent TA award),
+  manager of the CSIE Make Reality Space.
+
+PROJECTS
+- Hackathons: Me_nu (OpenHCI 2024, Demonstration Award), CaRPG (MakeNTU 2024, 1st place AUO Award),
+  Blue Vista (NASA Space Apps 2023, Taiwan Space Agency Award), Intellicoaster (MakeNTU 2023, 2nd place MediaTek Award).
+- Course projects (all A+): Embodied as Slime (haptic VR slime), Enhancing SQA3D, Olaf Vision (VLMs + imitation
+  learning), Polygoneon (Unity 2D action game, on itch.io), E-MoTChi (emoji translation with a transformer).
+- Personal: a self-hosted home server (Proxmox, Docker, Nginx; Nextcloud, media streaming, GitLab; about 20 users),
+  and this site, which has a physics-simulated pixel slime on the home page.
+- Starred on the site: HeadTurner, Embodied as Slime, Polygoneon.
+- Slimes come up again and again: the VR slime project, the site mascot, and repos like VectorSlime and slimetower.
+
+SKILLS
+- Languages: Mandarin (native), English (fluent; TOEFL 107, TOEIC 975)
+- Programming: Python (PyTorch), TypeScript (React), Dart (Flutter), Go, SQL, C/C++/C#, shell
+- Tools: Linux, Unity, Blender, Git, GCP, AWS, Docker, Proxmox, n8n, Arduino, Claude
+- Areas: AI/ML, computer vision, HCI/VR, robotics, embodied AI, backend systems, hardware prototyping (ESP32)
+
+HOW MARK WORKS (based on this session)
+- Gives short, direct instructions and expects them carried out without much back-and-forth.
+- Cares about visual polish: the CV PDF should match the LaTeX look, links should be icon + username,
+  project cards should show a category tag and a date, and the home page should fit one screen and be centered.
+- Likes tools that are simple and self-contained: a markdown-to-PDF CV with no LaTeX, and no extra dependencies.
+- Keeps the CV and the Projects page separate: the CV covers education, publications, experience and skills;
+  projects live on the site.
+- Uses the "ponytail" (minimal-change) coding mode and the Vite+ (`vp`) toolchain, and deploys to GitHub Pages.
+
+NOT KNOWN
+- Career goals after the M.Eng., or which roles Mark is targeting.
+- Pronouns.
+- Hobbies outside of tech, beyond what the projects suggest.

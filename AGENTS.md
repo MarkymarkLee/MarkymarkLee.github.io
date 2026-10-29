@@ -33,7 +33,8 @@ Static personal site, deployed to GitHub Pages by `.github/workflows/deploy.yml`
 ## Content layout
 
 - `content/site.yaml` — name, tagline, description, site URL, socials (an empty `url` hides a social).
-- `content/cv.md` — the CV. A role is an `###` heading followed by an italic line (`_2024 – Present · City_`) for dates/place. Browser print (Ctrl/Cmd+P) gives a clean A4 layout; no page limit.
+- `public/mark.txt` — a plain-text profile of Mark (background, CV facts, projects, working style); read it for context about the site's owner. Vite copies `public/` to the site root, so it is hosted at https://markymarklee.github.io/mark.txt. Keep phone numbers out of it, since it is public.
+- `content/cv.md` — the CV. A role is an `###` heading (links like `[\[GitHub\]](url)` go on it) followed by an italic dates line (`_2024 – Present_`), which renders flush right on the same row. `vp run cv:pdf` builds and prints it to `cv.pdf` (LaTeX-style print CSS in `src/style.css`, headless Chrome; set `CHROME` if it is not in /Applications). Browser print gives the same result.
 - `content/projects/<slug>.md` or `content/projects/<slug>/index.md` (folder form when it has images next to it).
 - `content/blog/<slug>.md` or `content/blog/<slug>/index.md`.
 
@@ -64,11 +65,12 @@ Static personal site, deployed to GitHub Pages by `.github/workflows/deploy.yml`
 title: Project name # required
 summary: One line shown on cards.
 date: 2026-10-20 # used for ordering
+category: personal # required: research | personal | hackathon | course (colored tag on the card)
 stack: [TypeScript, Rust]
 repo: https://github.com/...
-url: https://... # live demo
+url: https://... # live demo (shown as "Live"); put paper/slides/video links in the body
 image: cover.png # relative to the project folder, or an absolute URL
-featured: true # also listed on the home page
+featured: true # starred: pinned to the top of /projects/ with a ★; first 3 also on the home page
 ---
 ```
 

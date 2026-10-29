@@ -1,14 +1,14 @@
-# Site-wide settings. Socials with an empty url are hidden.
+# Site-wide settings. Socials with an empty url are hidden; the icon comes from the url.
 name: Mark Lee # PLACEHOLDER
 tagline: Software engineer who likes building things. # PLACEHOLDER
 description: Personal site of Mark Lee — CV, projects and writing. # PLACEHOLDER
 url: https://markymarklee.github.io
 socials:
-  - label: GitHub
+  - label: MarkymarkLee
     url: https://github.com/MarkymarkLee
-  - label: LinkedIn
-    url: "" # e.g. https://www.linkedin.com/in/<you>
-  - label: Email
-    url: "" # e.g. mailto:you@example.com
+  - label: markpclee
+    url: https://www.linkedin.com/in/markpclee/
+  - label: mark.pc.lee@gmail.com
+    url: mailto:mark.pc.lee@gmail.com
   - label: RSS
     url: /rss.xml

@@ -2,7 +2,7 @@ import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { deflateSync, crc32 } from "node:zlib";
 import { runs, spriteGrid } from "../src/slime/raster.ts";
-import type { Content, Post, Project } from "./content.ts";
+import { CATEGORIES, type Content, type Post, type Project } from "./content.ts";
 
 // Script/style tags for each page kind: dev points at /src, build at hashed files.
 export interface Assets {
@@ -19,6 +19,13 @@ const esc = (s: string) =>
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!,
   );
 
+const fmtMonth = (d: string) =>
+  new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+
 const fmtDate = (d: string) =>
   new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", {
     day: "numeric",
@@ -26,6 +33,38 @@ const fmtDate = (d: string) =>
     year: "numeric",
     timeZone: "UTC",
   });
+
+// Brand icons picked by link target, shown before the username in socials and the CV contact row.
+const svg = (body: string, attrs = 'fill="currentColor"') =>
+  `<svg class="icon" viewBox="0 0 16 16" ${attrs} aria-hidden="true">${body}</svg>`;
+const ICONS: [RegExp, string][] = [
+  [
+    /github\.com/,
+    svg(
+      '<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>',
+    ),
+  ],
+  [
+    /linkedin\.com/,
+    svg(
+      '<path d="M0 1.15C0 .52.52 0 1.15 0h13.7C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.15 1.15H1.15C.52 16 0 15.48 0 14.85zM4.94 13.4V6.17H2.54v7.23zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25S2.4 3.22 2.4 3.93c0 .7.52 1.25 1.32 1.25zM8.68 13.4V9.36c0-.22.02-.43.08-.58.17-.43.57-.88 1.24-.88.87 0 1.22.66 1.22 1.64v3.86h2.4V9.26c0-2.22-1.18-3.25-2.77-3.25-1.28 0-1.86.7-2.17 1.2V6.17h-2.4c.03.68 0 7.23 0 7.23z"/>',
+    ),
+  ],
+  [
+    /^mailto:/,
+    svg(
+      '<rect x="1" y="3" width="14" height="10" rx="1"/><path d="m1.5 3.5 6.5 5 6.5-5"/>',
+      'fill="none" stroke="currentColor" stroke-width="1.5"',
+    ),
+  ],
+  [
+    /rss/,
+    svg(
+      '<circle cx="3" cy="13" r="1.5"/><path d="M1.5 7.5a7 7 0 0 1 7 7M1.5 2.5a12 12 0 0 1 12 12" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+    ),
+  ],
+];
+const iconFor = (href: string) => ICONS.find(([re]) => re.test(href))?.[1] ?? "";
 
 // Same mocha colours the canvas uses, for places CSS variables can't reach.
 const SPRITE_HEX = ["", "#89b4fa", "#5b87d6", "#dbe7fd", "#11111b", "#cdd6f4"];
@@ -126,7 +165,7 @@ function layout(c: Content, a: Assets, p: PageOpts): string {
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 ${a.base}${p.home ? a.home : ""}
 </head>
-<body>
+<body${p.home ? ' class="home-page"' : ""}>
 <header class="site-header"><div class="wrap">
 <a class="brand" href="/">${spriteSvg(true)}<span>${esc(site.name)}</span></a>
 <nav class="site-nav" aria-label="Main">${nav}</nav>
@@ -155,13 +194,16 @@ const imgSrc = (p: Project) =>
 
 const projectCard = (p: Project) => `<a class="card" href="${projectHref(p)}">
 ${p.image ? `<img src="${esc(imgSrc(p)!)}" alt="" loading="lazy">` : ""}
-<div class="body"><h2>${esc(p.title)}</h2><p>${esc(p.summary)}</p>${tags(p.stack)}</div>
+<div class="body"><p class="card-meta"><span class="category ${p.category}">${CATEGORIES[p.category]}</span>${p.date ? `<time datetime="${p.date}">${fmtMonth(p.date)}</time>` : ""}</p><h2>${p.featured ? '<span class="star" aria-label="Starred">★</span> ' : ""}${esc(p.title)}</h2><p>${esc(p.summary)}</p>${tags(p.stack)}</div>
 </a>`;
 
 function homePage(c: Content): string {
   const { site } = c;
   const socials = site.socials
-    .map((s) => `<li><a href="${esc(s.url)}" rel="me noopener">${esc(s.label)}</a></li>`)
+    .map(
+      (s) =>
+        `<li><a href="${esc(s.url)}" rel="me noopener">${iconFor(s.url)}${esc(s.label)}</a></li>`,
+    )
     .join("");
   const latest = c.posts.slice(0, 3);
   const featured = c.projects.filter((p) => p.featured).slice(0, 3);
@@ -225,7 +267,11 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     path: "/cv/",
     title: "CV",
     description: `CV of ${site.name}`,
-    body: `<article class="prose narrow cv">${c.cv}</article>`,
+    // Contact list right under the name gets icons too.
+    body: `<article class="prose narrow cv">${c.cv.replace(
+      /(<\/h1>\s*<ul>[\s\S]*?<\/ul>)/,
+      (list) => list.replace(/<a href="([^"]+)">/g, (a, href: string) => a + iconFor(href)),
+    )}</article>`,
   });
 
   page("projects/index.html", {
@@ -245,7 +291,7 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
       path: projectHref(p),
       title: p.title,
       description: p.summary,
-      body: `<div class="page-head"><h1>${esc(p.title)}</h1><p>${esc(p.summary)}</p>${tags(p.stack)}${links ? `<div class="project-links">${links}</div>` : ""}</div><article class="prose">${p.html}</article>`,
+      body: `<div class="page-head"><p class="label">${CATEGORIES[p.category]}</p><h1>${esc(p.title)}</h1><p>${esc(p.summary)}</p>${tags(p.stack)}${links ? `<div class="project-links">${links}</div>` : ""}</div><article class="prose">${p.html}</article>`,
     });
     await copyAssets(files, p.assetDir, `projects/${p.slug}`);
   }

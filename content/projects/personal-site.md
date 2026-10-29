@@ -2,9 +2,10 @@
 title: Personal site # PLACEHOLDER project
 summary: This website, a static site with a soft-body pixel slime.
 date: 2026-10-20
+category: personal
 stack: [TypeScript, Vite+, Canvas]
 repo: https://github.com/MarkymarkLee/MarkymarkLee.github.io
-featured: true
+featured: false
 ---
 
 A placeholder project write-up. Describe what it does, why you built it, and what was interesting.

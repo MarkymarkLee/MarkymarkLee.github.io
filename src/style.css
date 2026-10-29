@@ -197,9 +197,23 @@ main {
 /* Home */
 .home {
   display: grid;
-  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  /* Slime shrinks with viewport height so the home page fits on one screen. */
+  grid-template-columns: min(420px, 55svh) minmax(0, 480px);
+  justify-content: center;
+  align-items: center;
   gap: 48px;
-  align-items: start;
+}
+/* Home is one fixed screen when it fits; shorter windows and the stacked mobile layout still scroll. */
+@media (min-width: 761px) and (min-height: 820px) {
+  body.home-page {
+    height: 100svh;
+    overflow: hidden;
+  }
+  .home-page main {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+  }
 }
 .slime-box {
   aspect-ratio: 1;
@@ -243,6 +257,12 @@ main {
   padding: 0;
   margin: 0 0 32px;
   list-style: none;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-right: 0.4em;
 }
 .socials a {
   display: inline-block;
@@ -374,6 +394,31 @@ main {
   color: var(--subtext);
   font-size: 0.95rem;
 }
+.card .card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+.card .star {
+  color: var(--peach);
+}
+.category {
+  color: var(--base);
+  padding: 1px 8px;
+  background: var(--blue);
+}
+.category.research {
+  background: var(--mauve);
+}
+.category.personal {
+  background: var(--green);
+}
+.category.hackathon {
+  background: var(--peach);
+}
 
 /* Long-form markdown */
 .prose {
@@ -460,14 +505,32 @@ pre.shiki {
   margin-top: 12px;
 }
 
-/* CV: date/location line right under a role reads as metadata. */
-.cv h3 {
-  margin-bottom: 0;
+/* CV: a role's title and dates share a row; contact links sit in a row under the name. */
+.cv h1 + ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding: 0;
+  list-style: none;
 }
-.cv h3 + p:has(> em:only-child) {
-  margin-top: 2px;
+.cv-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 16px;
+  margin-top: 1.4em;
+}
+.cv-row h3 {
+  margin: 0;
+}
+.cv-row .when {
+  margin: 0;
   font-size: 0.9rem;
   color: var(--subtext);
+}
+.cv-row + p {
+  margin-top: 2px;
 }
 .cv h2 {
   border-bottom: 2px solid var(--surface0);
@@ -527,5 +590,67 @@ pre.shiki {
   p,
   ul {
     margin: 3pt 0;
+  }
+
+  /* CV prints like the LaTeX one: serif, small-caps ruled sections, dates flush right. */
+  .cv {
+    font-family: "Latin Modern Roman", "CMU Serif", "Times New Roman", Times, serif;
+    font-size: 11pt;
+    line-height: 1.3;
+    color: #000;
+  }
+  .cv h1,
+  .cv h2,
+  .cv h3 {
+    font-family: inherit;
+    letter-spacing: 0;
+  }
+  .cv h1 {
+    font-size: 24pt;
+    font-weight: 400;
+    text-align: center;
+  }
+  .cv h1 + ul {
+    justify-content: space-between;
+  }
+  .cv h1 + ul li {
+    list-style: none;
+    margin: 0;
+  }
+  .cv h2 {
+    font-size: 15pt;
+    font-weight: 400;
+    font-variant: small-caps;
+    border-bottom: 0.6pt solid #000;
+    padding-bottom: 1pt;
+    margin: 14pt 0 6pt;
+  }
+  .cv-row {
+    flex-wrap: nowrap;
+    margin-top: 7pt;
+    break-after: avoid;
+  }
+  .cv h3 {
+    font-size: 11pt;
+  }
+  .cv-row .when {
+    font-size: 11pt;
+    color: #000;
+    white-space: nowrap;
+  }
+  .cv a {
+    color: #039;
+  }
+  .cv h3 > a:first-child {
+    color: inherit;
+  }
+  .cv ul {
+    padding-left: 1em;
+  }
+  .cv li {
+    list-style-type: "- ";
+  }
+  .cv li + li {
+    margin-top: 2pt;
   }
 }
