@@ -55,7 +55,11 @@ HOW MARK WORKS (based on this session)
   projects live on the site.
 - Uses the "ponytail" (minimal-change) coding mode and the Vite+ (`vp`) toolchain, and deploys to GitHub Pages.
 
+CAREER GOALS (from Mark, 2026-10-31)
+- Target roles: software engineer, forward-deployed engineer (FDE), AI engineer, robotics.
+- Wants work where he connects with people, understands their problems and helps them.
+- Graduates May 2027 (UC Berkeley M.Eng.). Needs visa sponsorship.
+
 NOT KNOWN
-- Career goals after the M.Eng., or which roles Mark is targeting.
 - Pronouns.
 - Hobbies outside of tech, beyond what the projects suggest.
