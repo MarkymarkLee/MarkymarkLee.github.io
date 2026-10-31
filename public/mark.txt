@@ -22,7 +22,7 @@ RESEARCH
 WORK
 - Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026). Built a game backend
   in Go and C# for elderly hospital users, deployed on GCP with CI/CD.
-- Uni-President Enterprises: AI Automation Engineer & Consultant (Feb–Apr 2026). Internal tool for the financial
+- Uni-President Enterprises: Software Engineer & Consultant (Feb–Apr 2026; CV title changed from "AI Automation Engineer & Consultant"). Internal tool for the financial
   department (Mark's dad works there and asked him to help). Their monthly report took a full day of copying and
   pasting between Excel files. Mark built an Electron desktop app: point it at a folder of Excel files, press one
   button, get the final report. Saves about one day of work per month. Everything runs locally (the department's
