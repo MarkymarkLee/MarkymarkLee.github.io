@@ -28,7 +28,15 @@ WORK
   button, get the final report. Saves about one day of work per month. Everything runs locally (the department's
   requirement). No AI/LLM: company rules ban AI tools. The team didn't know what tools were possible, so Mark
   consulted first: worked out and explained their problem, proposed the approach, then built it. So the "consultant"
-  part of the title is real; the "AI" part is not. The CV says "30 users" and "2 days/month";
+  part of the title is real; the "AI" part is not.
+  - Team of 30; still in use. One person runs it: drop the teams' reports in a folder, add the folder, done.
+  - Hardest part: every team sends its report in a different layout, so Mark worked out an extraction rule per
+    variable per format (e.g. "budget is two cells right of the name").
+  - Stack: TypeScript + Electron. Paid informally (by his dad), not a formal company contract.
+  - They want to expand: they have a database with all the data but don't know how to get value from it.
+  - What it taught him (his words, condensed): a lot of work can be automated but nobody makes time for it;
+    companies need people who help them figure out what's possible and what's best for them. He loves that
+    process of helping people figure things out. -> This is his "why FDE" answer. The CV says "30 users" and "2 days/month";
   Mark's own account says one day.
 - A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
   pipelines, an AI chatbot and a dashboard for real-time stock analytics.
