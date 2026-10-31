@@ -26,7 +26,9 @@ WORK
   department (Mark's dad works there and asked him to help). Their monthly report took a full day of copying and
   pasting between Excel files. Mark built an Electron desktop app: point it at a folder of Excel files, press one
   button, get the final report. Saves about one day of work per month. Everything runs locally (the department's
-  requirement). No AI/LLM involved, so the "AI" in the title is a stretch. The CV says "30 users" and "2 days/month";
+  requirement). No AI/LLM: company rules ban AI tools. The team didn't know what tools were possible, so Mark
+  consulted first: worked out and explained their problem, proposed the approach, then built it. So the "consultant"
+  part of the title is real; the "AI" part is not. The CV says "30 users" and "2 days/month";
   Mark's own account says one day.
 - A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
   pipelines, an AI chatbot and a dashboard for real-time stock analytics.
