@@ -33,7 +33,10 @@ WORK
   - Hardest part: every team sends its report in a different layout, so Mark worked out an extraction rule per
     variable per format (e.g. "budget is two cells right of the name").
   - Stack: TypeScript + Electron. Paid informally (by his dad), not a formal company contract.
-  - They want to expand: they have a database with all the data but don't know how to get value from it.
+  - 40 different report layouts to reverse-engineer.
+  - They wanted more (e.g. a new database), but Mark advised against it: a ground-up database would take a long
+    time and force people to learn a new system. He recommended starting with Excel-based automation and moving
+    further step by step. Good example of him scoping down and pushing back on a client.
   - What it taught him (his words, condensed): a lot of work can be automated but nobody makes time for it;
     companies need people who help them figure out what's possible and what's best for them. He loves that
     process of helping people figure things out. -> This is his "why FDE" answer. The CV says "30 users" and "2 days/month";
