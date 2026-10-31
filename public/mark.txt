@@ -22,8 +22,12 @@ RESEARCH
 WORK
 - Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026). Built a game backend
   in Go and C# for elderly hospital users, deployed on GCP with CI/CD.
-- Uni-President Enterprises: AI Automation Engineer & Consultant (Feb–Apr 2026). Automated financial reporting
-  for 30 users, all processed locally.
+- Uni-President Enterprises: AI Automation Engineer & Consultant (Feb–Apr 2026). Internal tool for the financial
+  department (Mark's dad works there and asked him to help). Their monthly report took a full day of copying and
+  pasting between Excel files. Mark built an Electron desktop app: point it at a folder of Excel files, press one
+  button, get the final report. Saves about one day of work per month. Everything runs locally (the department's
+  requirement). No AI/LLM involved, so the "AI" in the title is a stretch. The CV says "30 users" and "2 days/month";
+  Mark's own account says one day.
 - A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
   pipelines, an AI chatbot and a dashboard for real-time stock analytics.
 - Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
