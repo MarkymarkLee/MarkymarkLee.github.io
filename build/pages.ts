@@ -205,25 +205,15 @@ function homePage(c: Content): string {
         `<li><a href="${esc(s.url)}" rel="me noopener">${iconFor(s.url)}${esc(s.label)}</a></li>`,
     )
     .join("");
-  const latest = c.posts.slice(0, 3);
-  const featured = c.projects.filter((p) => p.featured).slice(0, 3);
+  const latest = c.posts[0];
   return `<div class="home">
 <div class="slime-box"><span class="hint">drag &amp; throw me</span><canvas id="slime" aria-label="A pixel slime you can drag and throw" role="img"></canvas></div>
 <div class="intro">
 <h1>${esc(site.name)}</h1>
 <p class="tagline">${esc(site.tagline)}</p>
 <ul class="socials">${socials}</ul>
-${latest.length ? `<p class="label">Latest writing</p><ul class="list">${latest.map(postItem).join("")}</ul>` : ""}
-${
-  featured.length
-    ? `<p class="label">Featured projects</p><ul class="list">${featured
-        .map(
-          (p) =>
-            `<li><a href="${projectHref(p)}">${esc(p.title)}</a><span class="meta">${esc(p.summary)}</span></li>`,
-        )
-        .join("")}</ul>`
-    : ""
-}
+${site.skills?.length ? `<p class="label">Skills</p>${tags(site.skills)}` : ""}
+${latest ? `<p class="label">Latest writing</p><ul class="list">${postItem(latest)}</ul>` : ""}
 </div>
 </div>`;
 }
@@ -278,7 +268,7 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     path: "/projects/",
     title: "Projects",
     description: `Projects by ${site.name}`,
-    body: `<div class="page-head"><h1>Projects</h1><p>Things I've built.</p></div><div class="cards">${c.projects.map(projectCard).join("")}</div>`,
+    body: `<div class="page-head"><h1>Projects</h1></div><div class="cards">${c.projects.map(projectCard).join("")}</div>`,
   });
   for (const p of c.projects) {
     const links = [
@@ -300,7 +290,7 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     path: "/blog/",
     title: "Blog",
     description: `Writing by ${site.name}`,
-    body: `<div class="narrow"><div class="page-head"><h1>Blog</h1><p>Notes and write-ups. <a href="/rss.xml">RSS</a></p></div><ul class="list">${c.posts.map(postItem).join("")}</ul></div>`,
+    body: `<div class="narrow"><div class="page-head"><h1>Blog</h1></div><ul class="list">${c.posts.map(postItem).join("")}</ul></div>`,
   });
   for (const p of c.posts) {
     page(`blog/${p.slug}/index.html`, {

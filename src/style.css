@@ -204,7 +204,7 @@ main {
   gap: 48px;
 }
 /* Home is one fixed screen when it fits; shorter windows and the stacked mobile layout still scroll. */
-@media (min-width: 761px) and (min-height: 820px) {
+@media (min-width: 761px) and (min-height: 700px) {
   body.home-page {
     height: 100svh;
     overflow: hidden;
@@ -505,7 +505,7 @@ pre.shiki {
   margin-top: 12px;
 }
 
-/* CV: a role's title and dates share a row; contact links sit in a row under the name. */
+/* CV: dates line sits under a role's title; contact links sit in a row under the name. */
 .cv h1 + ul {
   display: flex;
   flex-wrap: wrap;
@@ -513,24 +513,31 @@ pre.shiki {
   padding: 0;
   list-style: none;
 }
-.cv-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0 16px;
-  margin-top: 1.4em;
+.cv h3 {
+  margin-bottom: 0;
 }
-.cv-row h3 {
-  margin: 0;
-}
-.cv-row .when {
-  margin: 0;
+.cv h3 + p:has(> em:only-child) {
+  margin-top: 2px;
   font-size: 0.9rem;
   color: var(--subtext);
 }
-.cv-row + p {
-  margin-top: 2px;
+/* Dates inside a heading (`### School _2021 – 2025_`) sit on the right on wide screens and drop below on narrow ones. */
+.cv h3 > em:last-child {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--subtext);
+}
+@media (min-width: 600px) {
+  .cv h3:has(> em:last-child) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .cv h3 > em:last-child {
+    white-space: nowrap;
+  }
 }
 .cv h2 {
   border-bottom: 2px solid var(--surface0);
@@ -592,7 +599,7 @@ pre.shiki {
     margin: 3pt 0;
   }
 
-  /* CV prints like the LaTeX one: serif, small-caps ruled sections, dates flush right. */
+  /* CV prints like the LaTeX one: serif, small-caps ruled sections, dates under each title. */
   .cv {
     font-family: "Latin Modern Roman", "CMU Serif", "Times New Roman", Times, serif;
     font-size: 11pt;
@@ -625,18 +632,15 @@ pre.shiki {
     padding-bottom: 1pt;
     margin: 14pt 0 6pt;
   }
-  .cv-row {
-    flex-wrap: nowrap;
-    margin-top: 7pt;
-    break-after: avoid;
-  }
   .cv h3 {
     font-size: 11pt;
+    margin-top: 7pt;
   }
-  .cv-row .when {
+  .cv h3 + p:has(> em:only-child),
+  .cv h3 > em:last-child {
     font-size: 11pt;
+    margin: 0;
     color: #000;
-    white-space: nowrap;
   }
   .cv a {
     color: #039;

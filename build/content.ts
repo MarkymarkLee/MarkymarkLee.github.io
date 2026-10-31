@@ -10,6 +10,7 @@ export interface SiteConfig {
   url: string;
   description: string;
   socials: { label: string; url: string }[];
+  skills?: string[];
 }
 
 export interface Post {
@@ -162,13 +163,7 @@ export async function loadContent(root: string, { drafts = false } = {}): Promis
   site.url = site.url.replace(/\/$/, "");
   site.socials = (site.socials ?? []).filter((s) => s.url);
 
-  // A role's heading and the italic dates line under it share one row, like the PDF CV.
-  const cv = (
-    await md.parse(splitFrontmatter(await read(join(root, "cv.md")), "cv.md").body)
-  ).replace(
-    /(<h3[^>]*>[\s\S]*?<\/h3>)\s*<p><em>((?:(?!<\/p>)[\s\S])*)<\/em><\/p>/g,
-    '<div class="cv-row">$1<p class="when">$2</p></div>',
-  );
+  const cv = await md.parse(splitFrontmatter(await read(join(root, "cv.md")), "cv.md").body);
 
   const posts: Post[] = [];
   for (const e of await entries(join(root, "blog"))) {

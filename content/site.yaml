@@ -3,6 +3,8 @@ name: Mark Lee # PLACEHOLDER
 tagline: Software engineer who likes building things. # PLACEHOLDER
 description: Personal site of Mark Lee — CV, projects and writing. # PLACEHOLDER
 url: https://markymarklee.github.io
+# Coding skills, shown as tags on the home page.
+skills: [Python, PyTorch, TypeScript, React, Dart, Flutter, Go, SQL, C, C++, "C#", Shell]
 socials:
   - label: MarkymarkLee
     url: https://github.com/MarkymarkLee

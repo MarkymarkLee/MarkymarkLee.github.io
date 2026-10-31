@@ -6,49 +6,13 @@
 
 ## Education
 
-### University of California, Berkeley (Berkeley, CA)
+### University of California, Berkeley _Aug 2026 – May 2027_
 
-_Aug 2026 – May 2027 (Expected)_
+M.Eng. in Electrical Engineering & Computer Science
 
-Master of Engineering in Electrical Engineering & Computer Science
+### National Taiwan University _Sep 2021 – Jan 2026_
 
-### National Taiwan University (Taipei, Taiwan)
-
-_Sep 2021 – Jan 2026_
-
-Bachelor of Science in Computer Science & Information Engineering · GPA 4.2/4.3
-
-**3 Academic Excellence Awards (2021-1, 2023-1, 2024-1)**: ranking in top 1% of the department
-
-## Publications
-
-### [HeadTurner](/projects/headturner/) — _Proceedings of CHI 2025_ [\[Paper\]](https://dl.acm.org/doi/10.1145/3706598.3714214) [\[GitHub\]](https://github.com/ntu-hci-lab/HeadTurner)
-
-_Feb 2024 – May 2025_
-
-- Collaborated as co-author and designed a novel device that enhances user comfort and viewing range in a reclined position using HMDs.
-- Implemented EMG analysis, conducted user studies and wrote the related works part of the paper.
-- Wu, En-Huei, et al. "HeadTurner: Enhancing Viewing Range and Comfort of using Virtual and Mixed-Reality Headsets while Lying Down via Assisted Shoulder and Head Actuation." _Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems_. 2025.
-
-## Research Experience
-
-### Embodied AI Lab
-
-_Sep 2025 – Jan 2026_
-
-**_Advisor: Prof. Tsung-Wei Ke_**
-
-- Researched 3D models pose estimation and scene generation.
-- Presented robot safety related work in weekly lab meetings.
-
-### NTU HCI Lab
-
-_Feb 2024 – May 2025_
-
-**_Advisor: Prof. Mike Y. Chen_**
-
-- Co-authored HeadTurner (CHI 2025), a device for comfortable VR/MR viewing while lying down.
-- Implemented EMG analysis and conducted user studies.
+B.S. in Computer Science & Information Engineering
 
 ## Experience
 
@@ -65,6 +29,15 @@ _Feb 2026 – Apr 2026_
 
 - Automated a full-day financial reporting process for a team of 30 users, saving 2 days of work per month.
 - Ensured data security by processing all information locally without any cloud dependency.
+
+### Embodied AI Lab
+
+_Sep 2025 – Jan 2026_
+
+**_Advisor: Prof. Tsung-Wei Ke_**
+
+- Researched 3D models pose estimation and scene generation.
+- Presented robot safety related work in weekly lab meetings.
 
 ### Confidential Fintech Startup — AI & Backend Engineer (Contractor)
 
@@ -90,6 +63,15 @@ _Sep 2024 – Jun 2025_
 - Produced 5 apps, including a calorie calculator, a dating app, and a finance analysis app.
 - Hosted 2 talks from a Google Developer Expert and an AWS Solutions Architect.
 
+### NTU HCI Lab
+
+_Feb 2024 – May 2025_
+
+**_Advisor: Prof. Mike Y. Chen_**
+
+- Co-authored HeadTurner (CHI 2025), a device for comfortable VR/MR viewing while lying down.
+- Implemented EMG analysis and conducted user studies.
+
 ### Teaching Assistant — Computer System Lab
 
 _Feb 2024 – Jun 2024_
@@ -112,3 +94,13 @@ _Sep 2023 – Jun 2025_
 - **Programming:** Python (PyTorch), TypeScript (React), Dart (Flutter), Golang, SQL, C (C++, C#), shell
 - **Software:** Linux, Unity, Blender, Git (GitHub), GCP, AWS, Docker, Proxmox, n8n, Arduino, Claude
 - **Knowledge:** AI, machine learning, computer vision, computer networks, data structures & algorithms
+
+## Publications
+
+### [HeadTurner](/projects/headturner/) — _Proceedings of CHI 2025_ [\[Paper\]](https://dl.acm.org/doi/10.1145/3706598.3714214) [\[GitHub\]](https://github.com/ntu-hci-lab/HeadTurner)
+
+_Feb 2024 – May 2025_
+
+- Collaborated as co-author and designed a novel device that enhances user comfort and viewing range in a reclined position using HMDs.
+- Implemented EMG analysis, conducted user studies and wrote the related works part of the paper.
+- Wu, En-Huei, et al. "HeadTurner: Enhancing Viewing Range and Comfort of using Virtual and Mixed-Reality Headsets while Lying Down via Assisted Shoulder and Head Actuation." _Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems_. 2025.
