@@ -77,6 +77,9 @@ CAREER GOALS (from Mark, 2026-10-31)
 - Wants work where he connects with people, understands their problems and helps them.
 - Graduates May 2027 (UC Berkeley M.Eng.). Needs visa sponsorship.
 
+- Startup idea (2026-11-01): 3D reconstruction of a digital twin of a heart, using a small submarine-like robot
+  with many sensors (cameras, lidar). Unclear yet: in-vivo vs. phantom, stage, co-founders.
+
 NOT KNOWN
 - Pronouns.
 - Hobbies outside of tech, beyond what the projects suggest.
