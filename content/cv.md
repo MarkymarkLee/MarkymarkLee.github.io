@@ -101,6 +101,15 @@ _Sep 2023 – Jun 2025_
 - Launched the space's first workshops (4 workshops, 60+ students), turning a little-known room into one students now regularly use to build their own projects.
 - Helped CSIE students use 3D printers, laser cutters and VR headsets, and maintained the equipment with a team of 7.
 
+## Projects
+
+### [BlueRobins Newsletter](/projects/bluerobins-newsletter/) — LAUNCH-A-THON 2026, Winning Team
+
+_Oct 2026_
+
+- Built a newsletter editor in 2 days with a team of 3 for the startup BlueRobins, after listening to their goals of reaching new customers and keeping current ones.
+- Next.js app with modular section cards in their brand design, email-safe HTML sent through SendGrid, and an MCP server so Claude can draft an issue straight into the editor.
+
 ## Skills
 
 - **Languages:** Mandarin (native), English (fluent; TOEFL 107/120, TOEIC 975/990)
