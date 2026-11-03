@@ -63,8 +63,8 @@ _Feb 2024 – May 2025_
 
 **_Advisor: Prof. Mike Y. Chen_**
 
-- Co-authored HeadTurner (CHI 2025), a device for comfortable VR/MR viewing while lying down.
-- Implemented EMG analysis and conducted user studies.
+- Co-authored HeadTurner (CHI 2025), a device that assists head and shoulder movement for comfortable VR/MR viewing while lying down.
+- Implemented the EMG analysis, ran the user studies and wrote the related-work section of the paper.
 
 ### Tutor — Math & Programming
 
@@ -98,8 +98,4 @@ _Sep 2023 – Jun 2025_
 
 ### [HeadTurner](/projects/headturner/) — _Proceedings of CHI 2025_ [\[Paper\]](https://dl.acm.org/doi/10.1145/3706598.3714214) [\[GitHub\]](https://github.com/ntu-hci-lab/HeadTurner)
 
-_Feb 2024 – May 2025_
-
-- Collaborated as co-author and designed a novel device that enhances user comfort and viewing range in a reclined position using HMDs.
-- Implemented EMG analysis, conducted user studies and wrote the related works part of the paper.
-- Wu, En-Huei, et al. "HeadTurner: Enhancing Viewing Range and Comfort of using Virtual and Mixed-Reality Headsets while Lying Down via Assisted Shoulder and Head Actuation." _Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems_. 2025.
+Wu, En-Huei, et al. "HeadTurner: Enhancing Viewing Range and Comfort of using Virtual and Mixed-Reality Headsets while Lying Down via Assisted Shoulder and Head Actuation." _Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems_. 2025.
