@@ -28,8 +28,8 @@ EDUCATION
 
 EXPERIENCE (most recent first)
 - Autolane (autonomous-delivery startup), UC Berkeley M.Eng. capstone project, Sep 2026 – present
-  - Capstone project with Autolane. In progress. All project details are confidential; do not guess
-    or add any.
+  - Improving Autolane's dispatching algorithm for automated deliveries and deploying it to multiple
+    operators. In progress; no results yet. The client is confidential; do not guess or name it.
 
 - Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
   - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.
