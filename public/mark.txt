@@ -1,61 +1,110 @@
-MARK — what Claude knows (from this conversation, 2026-10-29)
-====================================================================
+MARK LEE: PROFILE
+=================
+A plain-text profile for people and AI agents. Facts here match the CV at
+https://markymarklee.github.io/cv/. Last updated 2026-11-03.
 
-IDENTITY & CONTACT
-- Full name: Pei Chen Lee. Goes by Mark Lee. (The LaTeX CV says "Markaa Lee", which looks like a typo.)
+SUMMARY
+Mark Lee (Pei Chen Lee) is a software engineer finishing an M.Eng. in EECS at UC Berkeley (graduating
+May 2027). He likes sitting with people who aren't technical, working out what they actually need, and
+building it. He has done this for a finance team, a fintech startup and an elderly-care research project.
+He also has HCI research (a CHI 2025 paper), 3D vision coursework and hardware prototyping behind him.
+
+LOOKING FOR
+- Full-time roles starting after May 2027: software engineer, forward-deployed engineer (FDE),
+  AI engineer, robotics.
+- Wants work that involves connecting with people, understanding their problems and helping them.
+- Based in Berkeley, CA. Requires US visa sponsorship.
+
+CONTACT
 - Email: mark.pc.lee@gmail.com
-- GitHub: MarkymarkLee (https://github.com/MarkymarkLee)
-- LinkedIn: markpclee (https://www.linkedin.com/in/markpclee/)
-- Personal site: https://markymarklee.github.io (this repo)
+- GitHub: https://github.com/MarkymarkLee
+- LinkedIn: https://www.linkedin.com/in/markpclee/
+- Site: https://markymarklee.github.io
 
 EDUCATION
-- UC Berkeley: M.Eng. in EECS, Aug 2026 – May 2027 (expected). Now in Berkeley, CA.
+- UC Berkeley: M.Eng. in Electrical Engineering & Computer Science, Aug 2026 – May 2027 (expected).
 - National Taiwan University: B.S. in Computer Science & Information Engineering, Sep 2021 – Jan 2026.
-  GPA 4.2/4.3. 3 Academic Excellence Awards (2021-1, 2023-1, 2024-1), top 1% of the department.
+  GPA 4.2/4.3, top 1% of the department, 3 Academic Excellence Awards.
 
-RESEARCH
-- Co-author of HeadTurner (CHI 2025): a device for comfortable VR/MR viewing while lying down.
-  Mark did the EMG analysis, ran user studies and wrote the related-work section.
-- NTU HCI Lab (Prof. Mike Y. Chen), Feb 2024 – May 2025.
-- Embodied AI Lab (Prof. Tsung-Wei Ke), Sep 2025 – Jan 2026: 3D pose estimation, scene generation, robot safety.
+EXPERIENCE (most recent first)
+- Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
+  - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.
+    The game uses a custom controller that measures grip strength during play. Mark built the Go game
+    server and the Unity (C#) networking.
+  - Designed a flow residents can use without a nurse: scan a QR code to log in, then press one
+    "Start game" button.
+  - Sole engineer. Set up CI/CD (tests, then automatic deploys to containers on GCP) and handed the
+    system over to the next engineer. The game is in testing.
 
-WORK
-- Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026). Built a game backend
-  in Go and C# for elderly hospital users, deployed on GCP with CI/CD.
-- Uni-President Enterprises: AI Automation Engineer & Consultant (Feb–Apr 2026). Automated financial reporting
-  for 30 users, all processed locally.
-- A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
-  pipelines, an AI chatbot and a dashboard for real-time stock analytics.
-- Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
-- Teaching: Lead of Teaching at GDG NTU, TA for Computer System Lab (Excellent TA award),
-  manager of the CSIE Make Reality Space.
+- Uni-President Enterprises Corp., Software Engineer & Consultant (contract), Feb – Apr 2026
+  - The 30-person finance department spent a full day each month copy-pasting Excel reports into one
+    final report. The team didn't know what was possible, company rules banned AI tools, and all data
+    had to stay on local machines.
+  - Mark worked out the problem with them, then reverse-engineered extraction rules for 40 different
+    report layouts and built a TypeScript/Electron desktop app: point it at a folder, press one button,
+    get the final report. It saves about one working day per month and is still in use.
+  - When the team asked for a new database, he advised against it (a long build plus retraining for
+    staff) and recommended automating step by step on top of the existing Excel workflow instead.
 
-PROJECTS
-- Hackathons: Me_nu (OpenHCI 2024, Demonstration Award), CaRPG (MakeNTU 2024, 1st place AUO Award),
-  Blue Vista (NASA Space Apps 2023, Taiwan Space Agency Award), Intellicoaster (MakeNTU 2023, 2nd place MediaTek Award).
-- Course projects (all A+): Embodied as Slime (haptic VR slime), Enhancing SQA3D, Olaf Vision (VLMs + imitation
-  learning), Polygoneon (Unity 2D action game, on itch.io), E-MoTChi (emoji translation with a transformer).
-- Personal: a self-hosted home server (Proxmox, Docker, Nginx; Nextcloud, media streaming, GitLab; about 20 users),
-  and this site, which has a physics-simulated pixel slime on the home page.
-- Starred on the site: HeadTurner, Embodied as Slime, Polygoneon.
-- Slimes come up again and again: the VR slime project, the site mascot, and repos like VectorSlime and slimetower.
+- NTU Embodied AI Lab (advisor: Prof. Tsung-Wei Ke), undergraduate researcher, Sep 2025 – Jan 2026
+  - Surveyed research on 3D pose estimation, 3D scene generation and robot safety (keeping robots from
+    damaging people, objects or themselves). Presented at weekly lab meetings. Literature work only.
+
+- Confidential fintech startup (~10 people), AI & Backend Engineer (contract), Aug 2025 – Feb 2026
+  - Sole engineer on a Python/Django stock-analysis pipeline covering ~7,000 stocks across decades of
+    market history. Cut a full run from about a month to 3 days (~10x) with parallel, batched NumPy
+    processing and far fewer database calls, meeting a hard deadline. He extended the existing code
+    instead of rewriting it, so results that were already correct stayed correct. The company uses the
+    output to decide which stocks to recommend.
+  - Built the backend for an AI chatbot that connects clients and internal teams to LLMs via API:
+    self-hosted Supabase on Postgres, with n8n automations linking LINE and Google Sheets. It logs and
+    categorises every message and AI action.
+
+- Tutor, math and programming, Jun 2025 – present: 7 students (high-school and college math; Python,
+  C++, algorithms).
+
+- Google Developer Group at NTU, Lead of Teaching, Sep 2024 – Jun 2025
+  - Designed and taught a course for 30 students on building AI apps with Flutter and Python.
+    Students built 5 working apps. Hosted talks by a Google Developer Expert and an AWS Solutions Architect.
+
+- NTU HCI Lab (advisor: Prof. Mike Y. Chen), Feb 2024 – May 2025
+  - Co-author of HeadTurner (CHI 2025), a device that assists head and shoulder movement so people can
+    use VR/MR headsets comfortably while lying down. Mark did the EMG analysis, ran the user studies and
+    wrote the related-work section. Paper: https://dl.acm.org/doi/10.1145/3706598.3714214
+
+- Teaching Assistant, Computer System Lab (NTU), Feb – Jun 2024
+  - Taught 60 students OpenCV, circuit design, Arduino and Unity. Ran office hours for the final
+    project, a self-driving car; every team delivered a working car. Excellent Teaching Assistant award
+    (from student ratings).
+
+- Manager, CSIE Make Reality Space (NTU maker space), Sep 2023 – Jun 2025
+  - Launched the space's first workshops (4 workshops, 60+ students). Few students knew about the space
+    before; now it is a regular place for them to build their own projects. Helped students use 3D
+    printers, laser cutters and VR headsets, and maintained the equipment with a team of 7.
+
+PROJECTS (details at https://markymarklee.github.io/projects/)
+- Hackathon awards: CaRPG (MakeNTU 2024, 1st place AUO Award), Intellicoaster (MakeNTU 2023, 2nd place
+  MediaTek Award), Blue Vista (NASA Space Apps 2023, Taiwan Space Agency Award), Me_nu (OpenHCI 2024,
+  Demonstration Award).
+- Course projects (all A+): Embodied as Slime (haptic VR with soft-body physics and ESP32-driven air
+  pumps), Enhancing SQA3D (3D scene dataset; +10% human evaluation score), Olaf Vision (VLMs + imitation
+  learning for robots), Polygoneon (Unity 2D action game, on itch.io), E-MoTChi (emoji translation with
+  a fine-tuned transformer).
+- Personal: a self-hosted home server (Proxmox, Docker, Nginx; Nextcloud, media streaming, GitLab;
+  ~20 users), and this site, which has a physics-simulated pixel slime on the home page. Slimes are a
+  recurring theme in his work.
 
 SKILLS
-- Languages: Mandarin (native), English (fluent; TOEFL 107, TOEIC 975)
-- Programming: Python (PyTorch), TypeScript (React), Dart (Flutter), Go, SQL, C/C++/C#, shell
-- Tools: Linux, Unity, Blender, Git, GCP, AWS, Docker, Proxmox, n8n, Arduino, Claude
-- Areas: AI/ML, computer vision, HCI/VR, robotics, embodied AI, backend systems, hardware prototyping (ESP32)
+- Languages: Mandarin (native), English (fluent; TOEFL 107/120, TOEIC 975/990).
+- Programming: Python (PyTorch, NumPy, Django), TypeScript (React, Electron), Dart (Flutter), Go, SQL,
+  C/C++/C#, shell.
+- Tools: Linux, Unity (incl. multiplayer networking), Blender, Git, GCP, AWS, Docker, Postgres, Supabase,
+  Proxmox, n8n, Arduino/ESP32.
+- Areas: backend systems and data pipelines, AI/ML, computer vision, HCI/VR, robotics, hardware
+  prototyping.
 
-HOW MARK WORKS (based on this session)
-- Gives short, direct instructions and expects them carried out without much back-and-forth.
-- Cares about visual polish: the CV PDF should match the LaTeX look, links should be icon + username,
-  project cards should show a category tag and a date, and the home page should fit one screen and be centered.
-- Likes tools that are simple and self-contained: a markdown-to-PDF CV with no LaTeX, and no extra dependencies.
-- Keeps the CV and the Projects page separate: the CV covers education, publications, experience and skills;
-  projects live on the site.
-- Uses the "ponytail" (minimal-change) coding mode and the Vite+ (`vp`) toolchain, and deploys to GitHub Pages.
-
-NOT KNOWN
-- Career goals after the M.Eng., or which roles Mark is targeting.
-- Pronouns.
-- Hobbies outside of tech, beyond what the projects suggest.
+HOW HE WORKS
+- Starts by understanding the user's problem, then proposes the simplest thing that solves it, and
+  will push back on scope a client doesn't need.
+- Prefers extending working systems over rewriting them, and simple, self-contained tools.
+- Gives short, direct instructions and cares about visual polish.
