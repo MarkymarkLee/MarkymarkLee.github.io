@@ -43,6 +43,16 @@ WORK
   Mark's own account says one day.
 - A confidential fintech startup: AI & Backend Engineer, contractor (Aug 2025 – Feb 2026). Built APIs, data
   pipelines, an AI chatbot and a dashboard for real-time stock analytics.
+  - Company: ~10 employees. Users read the analysis results; the company also uses them to decide which stocks
+    to recommend.
+  - Main job: a large analysis program over stock history (19xx to today), Python + Django API, processing items
+    one by one. A full run took about a month; Mark had a hard deadline to make it run, and finish, within a week.
+    He kept the logic that was already correct and built on it: parallel and batch processing with NumPy, and far
+    fewer database requests. Month -> under a week is ~4x+, so the CV's "10x" needs checking.
+  - Chatbot (separate project): a backend that connects the company's clients and internal teams, storing every
+    message and what the AI did with it, and logging and categorising each action. Self-hosted Supabase (to
+    confirm) on Postgres. It did not automate the actions themselves, so "automated internal workflows" is an
+    overclaim.
 - Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
 - Teaching: Lead of Teaching at GDG NTU, TA for Computer System Lab (Excellent TA award),
   manager of the CSIE Make Reality Space.
