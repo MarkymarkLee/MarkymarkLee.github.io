@@ -61,8 +61,8 @@ _Jun 2025 – Present_
 
 _Sep 2024 – Jun 2025_
 
-- Taught 30 students how to build AI apps using Flutter for frontend and Python for backend.
-- Produced 5 apps, including a calorie calculator, a dating app, and a finance analysis app.
+- Designed and taught a course for 30 students on building AI apps with Flutter (frontend) and Python (backend).
+- Students shipped 5 working apps, including a calorie calculator, a dating app and a finance analysis app.
 - Hosted 2 talks from a Google Developer Expert and an AWS Solutions Architect.
 
 ### NTU HCI Lab
@@ -79,16 +79,15 @@ _Feb 2024 – May 2025_
 _Feb 2024 – Jun 2024_
 
 - Taught 60 students software & hardware solutions using OpenCV, circuit design, Arduino, Unity, etc.
-- Held 1 office hour per week to assist students with their final project of making a self-driving car.
-- Awarded **Excellent Teaching Assistant** by the department.
+- Held weekly office hours for the final project, a self-driving car; every team delivered a working car.
+- Awarded **Excellent Teaching Assistant** by the department, based on student ratings.
 
 ### Manager — CSIE Make Reality Space
 
 _Sep 2023 – Jun 2025_
 
-- Assisted all CSIE students in using 3D printers, laser cutters, VR headsets, and other equipment.
-- Organized 4 workshops for more than 60 students to learn about new technologies.
-- Collaborated with a team of 7 on the inventory and maintenance of the lab equipment.
+- Launched the space's first workshops (4 workshops, 60+ students), turning a little-known room into one students now regularly use to build their own projects.
+- Helped CSIE students use 3D printers, laser cutters and VR headsets, and maintained the equipment with a team of 7.
 
 ## Skills
 
