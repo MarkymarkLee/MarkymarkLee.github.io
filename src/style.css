@@ -82,8 +82,9 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  /* Reserve the scrollbar's space on every page so the centred header doesn't jump between short and long pages. */
-  scrollbar-gutter: stable;
+  /* Always show the scrollbar so the centred header doesn't jump between short and long pages
+     (scrollbar-gutter would do this too, but older Safari ignores it). */
+  overflow-y: scroll;
 }
 
 body {
@@ -130,6 +131,16 @@ h4 {
 /* Header */
 .site-header {
   border-bottom: 2px solid var(--surface0);
+}
+/* On desktop the header stays pinned to the top while the page scrolls. */
+@media (min-width: 761px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--base);
+    box-shadow: 0 4px 0 var(--crust);
+  }
 }
 .site-header .wrap {
   display: flex;
