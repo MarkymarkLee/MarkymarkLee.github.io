@@ -27,6 +27,10 @@ EDUCATION
   GPA 4.2/4.3, top 1% of the department, 3 Academic Excellence Awards.
 
 EXPERIENCE (most recent first)
+- Autolane (autonomous-delivery startup), UC Berkeley M.Eng. capstone project, Sep 2026 – present
+  - Improving Autolane's dispatching algorithm and deploying it to multiple operators. In progress;
+    no results yet. Client and project details are confidential.
+
 - Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
   - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.
     The game uses a custom controller that measures grip strength during play. Mark built the Go game

@@ -16,6 +16,12 @@ B.S. in Computer Science & Information Engineering · GPA 4.2/4.3, top 1% of the
 
 ## Experience
 
+### Autolane — Capstone Project (UC Berkeley M.Eng.)
+
+_Sep 2026 – Present_
+
+- Working with Autolane, an autonomous-delivery startup, to improve its dispatching algorithm and deploy it to multiple operators.
+
 ### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
 _Apr 2026 – Jun 2026_
