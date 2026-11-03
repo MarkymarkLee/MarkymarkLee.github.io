@@ -11,6 +11,8 @@ export interface SiteConfig {
   description: string;
   socials: { label: string; url: string }[];
   skills?: string[];
+  /** Extra schema.org Person fields for the home page's JSON-LD. */
+  person?: Record<string, unknown>;
 }
 
 export interface Post {

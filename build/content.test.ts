@@ -39,6 +39,9 @@ describe("content build", () => {
     expect(files.has("blog/with-image/pic.png")).toBe(true);
     expect([...files.keys()].some((k) => k.includes("secret"))).toBe(false);
     expect(files.get("rss.xml")).toContain("https://x.test/blog/old/");
+    expect(files.get("robots.txt")).toContain("https://x.test/mark.txt");
+    expect(files.get("llms.txt")).toContain("https://x.test/mark.txt");
+    expect(files.get("index.html")).toContain('"@type":"Person"');
   });
 
   it("keeps drafts in dev", async () => {

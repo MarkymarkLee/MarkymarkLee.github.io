@@ -63,12 +63,33 @@ const ICONS: [RegExp, string][] = [
       '<circle cx="3" cy="13" r="1.5"/><path d="M1.5 7.5a7 7 0 0 1 7 7M1.5 2.5a12 12 0 0 1 12 12" fill="none" stroke="currentColor" stroke-width="1.8"/>',
     ),
   ],
+  [
+    /^https?:/,
+    svg(
+      '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c-2.2 2-2.2 11 0 13M8 1.5c2.2 2 2.2 11 0 13"/>',
+      'fill="none" stroke="currentColor" stroke-width="1.3"',
+    ),
+  ],
 ];
 const iconFor = (href: string) => ICONS.find(([re]) => re.test(href))?.[1] ?? "";
 
 // Same mocha colours the canvas uses, for places CSS variables can't reach.
 const SPRITE_HEX = ["", "#89b4fa", "#5b87d6", "#dbe7fd", "#11111b", "#cdd6f4"];
 const SPRITE_VAR = ["", "--slime", "--slime-edge", "--slime-shine", "--slime-eye", "--slime-glint"];
+
+// schema.org Person data so search engines and AI answer engines can identify who the site is about.
+function personJsonLd(site: Content["site"]): string {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.name,
+    url: site.url,
+    description: site.description,
+    sameAs: site.socials.map((s) => s.url).filter((u) => u.startsWith("http")),
+    ...site.person,
+  };
+  return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
+}
 
 export function spriteSvg(themed: boolean): string {
   const g = spriteGrid(16);
@@ -162,6 +183,8 @@ function layout(c: Content, a: Assets, p: PageOpts): string {
 <meta property="og:image" content="${site.url}/og.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/plain" title="Profile for AI agents" href="/mark.txt">
+${p.home ? personJsonLd(site) : ""}
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 ${a.base}${p.home ? a.home : ""}
 </head>
@@ -174,7 +197,7 @@ ${a.base}${p.home ? a.home : ""}
 <main><div class="wrap">
 ${p.body}
 </div></main>
-<footer class="site-footer"><div class="wrap">© ${new Date().getFullYear()} ${esc(site.name)} · <a href="/rss.xml">RSS</a></div></footer>
+<footer class="site-footer"><div class="wrap">© ${new Date().getFullYear()} ${esc(site.name)} · <a href="/rss.xml">RSS</a> · <a href="/mark.txt">Profile for AI agents</a></div></footer>
 </body>
 </html>
 `;
@@ -256,7 +279,7 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
   page("cv/index.html", {
     path: "/cv/",
     title: "CV",
-    description: `CV of ${site.name}`,
+    description: `CV of ${site.name}: education, experience, projects, skills and publications.`,
     // Contact list right under the name gets icons too.
     body: `<article class="prose narrow cv">${c.cv.replace(
       /(<\/h1>\s*<ul>[\s\S]*?<\/ul>)/,
@@ -317,7 +340,15 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     "sitemap.xml",
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`,
   );
-  files.set("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
+  files.set(
+    "robots.txt",
+    `# AI agents: a plain-text profile of ${site.name} is at ${site.url}/mark.txt (index: ${site.url}/llms.txt).\nUser-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`,
+  );
+  // llms.txt (llmstxt.org): a short index that points AI agents at the profile and main pages.
+  files.set(
+    "llms.txt",
+    `# ${site.name}\n\n> ${site.description}\n\n- [Profile](${site.url}/mark.txt): plain-text profile with background, experience, projects and skills. Start here.\n- [CV](${site.url}/cv/)\n- [Projects](${site.url}/projects/)\n- [Blog](${site.url}/blog/)\n`,
+  );
   files.set("favicon.svg", spriteSvg(false));
   files.set("og.png", ogPng());
   return files;
