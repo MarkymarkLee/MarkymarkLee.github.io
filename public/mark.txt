@@ -95,8 +95,9 @@ EXPERIENCE (most recent first)
 
 PROJECTS (details at https://markymarklee.github.io/projects/)
 - Hackathon awards: BlueRobins Newsletter (LAUNCH-A-THON 2026 at Berkeley Haas, one of the top-4 winning
-  teams; team of 3, built in 2 days: a modular Next.js newsletter builder matching the startup's design,
-  plus MCP servers so Claude drafts a newsletter from their Google Drive), CaRPG (MakeNTU 2024, 1st place AUO Award), Intellicoaster (MakeNTU 2023, 2nd place
+  teams; team of 3, built in 2 days: a Next.js newsletter editor with modular section cards in the
+  startup's design, email-safe HTML sent through SendGrid, and an MCP server so Claude can edit the draft
+  live, e.g. drafting an issue from their Google Drive), CaRPG (MakeNTU 2024, 1st place AUO Award), Intellicoaster (MakeNTU 2023, 2nd place
   MediaTek Award), Blue Vista (NASA Space Apps 2023, Taiwan Space Agency Award), Me_nu (OpenHCI 2024,
   Demonstration Award).
 - Course projects (all A+): Embodied as Slime (haptic VR with soft-body physics and ESP32-driven air
