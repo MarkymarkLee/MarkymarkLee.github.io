@@ -20,7 +20,8 @@ RESEARCH
 - Embodied AI Lab (Prof. Tsung-Wei Ke), Sep 2025 – Jan 2026: 3D pose estimation, scene generation, robot safety.
   By Mark's own account he didn't do much: mostly reading on robot safety (keeping robots from damaging people,
   things or themselves) and presenting in lab meetings. No code, model or result came out of it apart from the
-  embodied AI course project. Ended because he graduated. Don't oversell it.
+  embodied AI course project. Also surveyed 3D pose estimation and scene generation. Ended because he graduated.
+  Don't oversell it, but he keeps it on the CV because he finds the area really interesting.
 
 WORK
 - Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026).

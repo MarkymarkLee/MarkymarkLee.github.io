@@ -38,8 +38,8 @@ _Sep 2025 – Jan 2026_
 
 **_Advisor: Prof. Tsung-Wei Ke_**
 
-- Researched 3D models pose estimation and scene generation.
-- Presented robot safety related work in weekly lab meetings.
+- Surveyed research on 3D pose estimation, 3D scene generation and robot safety (keeping robots from damaging people, objects or themselves).
+- Presented findings at weekly lab meetings.
 
 ### Confidential Fintech Startup — AI & Backend Engineer (Contractor)
 
