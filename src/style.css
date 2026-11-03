@@ -82,6 +82,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Reserve the scrollbar's space on every page so the centred header doesn't jump between short and long pages. */
+  scrollbar-gutter: stable;
 }
 
 body {
