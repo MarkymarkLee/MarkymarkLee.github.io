@@ -21,7 +21,7 @@ B.S. in Computer Science & Information Engineering
 _Apr 2026 – Jun 2026_
 
 - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer, building the Go game server and the Unity (C#) networking for its custom grip-sensing controller.
-- Kept the game playable without nurse assistance, a core requirement for care-home residents.
+- Designed a nurse-free flow for elderly residents: QR-code login that identifies each player, then a single "Start game" button.
 - Sole engineer; set up CI/CD that runs tests and deploys automatically to containers on GCP, then handed the system over to the next engineer.
 
 ### Uni-President Enterprises Corp. — Software Engineer & Consultant

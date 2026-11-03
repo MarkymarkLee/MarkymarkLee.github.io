@@ -26,7 +26,10 @@ WORK
   - Mark converted it from single-player to multiplayer (Unity + Go server). Built it alone; someone else took it
     over after he left. Only worked with the professor, never met the users himself.
   - CI/CD: a simple build script that runs tests, then deploys automatically to a container on GCP. The old CV's
-    "saves 20 minutes per deployment" was never measured.
+    "saves 20 minutes per deployment" was never measured. The old "20 elderly users" was made up; the game is
+    still in testing, not deployed.
+  - Made it playable without nurses: residents log in by scanning a QR code that identifies them, then press one
+    big "Start game" button.
 - Uni-President Enterprises: Software Engineer & Consultant (Feb–Apr 2026; CV title changed from "AI Automation Engineer & Consultant"). Internal tool for the financial
   department (Mark's dad works there and asked him to help). Their monthly report took a full day of copying and
   pasting between Excel files. Mark built an Electron desktop app: point it at a folder of Excel files, press one
