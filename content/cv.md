@@ -16,7 +16,7 @@ B.S. in Computer Science & Information Engineering · GPA 4.2/4.3, top 1% of the
 
 ## Experience
 
-### Southern Taiwan University of Technology — Backend & Systems Engineer
+### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
 _Apr 2026 – Jun 2026_
 
@@ -24,7 +24,7 @@ _Apr 2026 – Jun 2026_
 - Designed a nurse-free flow for elderly residents: QR-code login that identifies each player, then a single "Start game" button.
 - Sole engineer; set up CI/CD that runs tests and deploys automatically to containers on GCP, then handed the system over to the next engineer.
 
-### Uni-President Enterprises Corp. — Software Engineer & Consultant
+### Uni-President Enterprises Corp. — Software Engineer & Consultant (Contract)
 
 _Feb 2026 – Apr 2026_
 
@@ -41,21 +41,13 @@ _Sep 2025 – Jan 2026_
 - Surveyed research on 3D pose estimation, 3D scene generation and robot safety (keeping robots from damaging people, objects or themselves).
 - Presented findings at weekly lab meetings.
 
-### Confidential Fintech Startup — AI & Backend Engineer (Contractor)
+### Confidential Fintech Startup — AI & Backend Engineer (Contract)
 
 _Aug 2025 – Feb 2026_
 
 - Sole engineer on a Python/Django stock-analysis pipeline covering ~7,000 stocks across decades of market history; cut a full run from ~1 month to 3 days (~10x) with parallel, batched NumPy processing and far fewer database calls, meeting a hard client deadline.
 - Extended the existing analysis code instead of rewriting it, keeping already-validated results intact for a 10-person company that uses the output to choose which stocks to recommend.
-- Built the backend for an AI chatbot connecting clients and internal teams to any LLM via API, logging and categorising every message and AI action in Postgres (self-hosted Supabase).
-
-### Freelancing
-
-_Jun 2025 – Present_
-
-- Tutored 7 students in math (high school – college) and programming (Python, C++, algorithms).
-- Developed financial analysis scripts and the backend of a production website for a company.
-- Established a business automation tool for a company connecting LINE and Google Sheets using n8n.
+- Built the backend for an AI chatbot connecting clients and internal teams to any LLM via API, with n8n automations linking LINE and Google Sheets, logging and categorising every message and AI action in Postgres (self-hosted Supabase).
 
 ### Lead of Teaching — Google Developer Group in NTU
 
@@ -73,6 +65,12 @@ _Feb 2024 – May 2025_
 
 - Co-authored HeadTurner (CHI 2025), a device for comfortable VR/MR viewing while lying down.
 - Implemented EMG analysis and conducted user studies.
+
+### Tutor — Math & Programming
+
+_Jun 2025 – Present_
+
+- Tutored 7 students in math (high school – college) and programming (Python, C++, algorithms).
 
 ### Teaching Assistant — Computer System Lab
 

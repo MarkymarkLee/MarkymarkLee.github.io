@@ -66,7 +66,9 @@ WORK
     message and what the AI did with it, and logging and categorising each action. Self-hosted Supabase on
     Postgres; connects to arbitrary LLMs through their APIs. Small number of clients. It did not automate the actions themselves, so "automated internal workflows" is an
     overclaim.
-- Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
+- Freelancer (Jun 2025 – now): the fintech, Uni-President and STUT jobs are all freelance contracts, so the CV no
+  longer has a separate "Freelancing" entry. The n8n automation (LINE + Google Sheets) was part of the fintech
+  chatbot backend. Also tutors 7 students in math and programming (its own entry on the CV).
 - Teaching: Lead of Teaching at GDG NTU, TA for Computer System Lab (Excellent TA award),
   manager of the CSIE Make Reality Space.
   - GDG: designed and taught the course himself; the 5 student apps work but were never published or entered
