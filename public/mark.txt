@@ -48,10 +48,11 @@ WORK
   - Main job: a large analysis program over stock history (19xx to today), Python + Django API, processing items
     one by one. A full run took about a month; Mark had a hard deadline to make it run, and finish, within a week.
     He kept the logic that was already correct and built on it: parallel and batch processing with NumPy, and far
-    fewer database requests. Month -> under a week is ~4x+, so the CV's "10x" needs checking.
+    fewer database requests. Result: ~1 month -> 3 days (~10x), ~7,000 stocks across the years. Met the deadline.
+    The previous engineer had left, so Mark was the only engineer on it.
   - Chatbot (separate project): a backend that connects the company's clients and internal teams, storing every
-    message and what the AI did with it, and logging and categorising each action. Self-hosted Supabase (to
-    confirm) on Postgres. It did not automate the actions themselves, so "automated internal workflows" is an
+    message and what the AI did with it, and logging and categorising each action. Self-hosted Supabase on
+    Postgres; connects to arbitrary LLMs through their APIs. Small number of clients. It did not automate the actions themselves, so "automated internal workflows" is an
     overclaim.
 - Freelancer (Jun 2025 – now): tutoring math and programming, finance scripts, n8n automation (LINE + Google Sheets).
 - Teaching: Lead of Teaching at GDG NTU, TA for Computer System Lab (Excellent TA award),

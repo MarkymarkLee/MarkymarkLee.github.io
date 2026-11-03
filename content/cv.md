@@ -23,12 +23,13 @@ _Apr 2026 – Jun 2026_
 - Architected a scalable game backend using Golang and C# for 20 elderly users inside a hospital.
 - Deployed on GCP with automated CI/CD deployment pipelines, saving the team 20 minutes per deployment.
 
-### Uni-President Enterprises Corp. — AI Automation Engineer & Consultant
+### Uni-President Enterprises Corp. — Software Engineer & Consultant
 
 _Feb 2026 – Apr 2026_
 
-- Automated a full-day financial reporting process for a team of 30 users, saving 2 days of work per month.
-- Ensured data security by processing all information locally without any cloud dependency.
+- Consulted with a 30-person finance team that had no technical background on a full-day monthly reporting process, working within company rules that banned AI tools and required all data to stay local.
+- Reverse-engineered extraction rules for 40 different Excel report layouts and built a TypeScript/Electron app that produces the final report in one click, saving ~1 working day per month; still in use.
+- Advised against a ground-up database rebuild in favour of step-by-step automation on top of their existing Excel workflow, avoiding a long build and retraining for staff.
 
 ### Embodied AI Lab
 
@@ -43,9 +44,9 @@ _Sep 2025 – Jan 2026_
 
 _Aug 2025 – Feb 2026_
 
-- Engineered backend APIs and data pipelines for a real-time stock analytics platform.
-- Accelerated financial analysis by 10x, enabling the team to meet client deadlines.
-- Built an AI chatbot and dashboard that automated internal workflows and operational processes.
+- Sole engineer on a Python/Django stock-analysis pipeline covering ~7,000 stocks across decades of market history; cut a full run from ~1 month to 3 days (~10x) with parallel, batched NumPy processing and far fewer database calls, meeting a hard client deadline.
+- Extended the existing analysis code instead of rewriting it, keeping already-validated results intact for a 10-person company that uses the output to choose which stocks to recommend.
+- Built the backend for an AI chatbot connecting clients and internal teams to any LLM via API, logging and categorising every message and AI action in Postgres (self-hosted Supabase).
 
 ### Freelancing
 
