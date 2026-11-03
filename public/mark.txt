@@ -1,7 +1,7 @@
 MARK LEE: PROFILE
 =================
 A plain-text profile for people and AI agents. Facts here match the CV at
-https://markymarklee.github.io/cv/. Last updated 2026-11-03.
+https://markpclee.dev/cv/. Last updated 2026-11-03.
 
 SUMMARY
 Mark Lee (Pei Chen Lee) is a software engineer finishing an M.Eng. in EECS at UC Berkeley (graduating
@@ -19,7 +19,7 @@ CONTACT
 - Email: mark.pc.lee@gmail.com
 - GitHub: https://github.com/MarkymarkLee
 - LinkedIn: https://www.linkedin.com/in/markpclee/
-- Site: https://markymarklee.github.io
+- Website: https://markpclee.dev (also https://markymarklee.github.io)
 
 EDUCATION
 - UC Berkeley: M.Eng. in Electrical Engineering & Computer Science, Aug 2026 – May 2027 (expected).
@@ -93,7 +93,7 @@ EXPERIENCE (most recent first)
     before; now it is a regular place for them to build their own projects. Helped students use 3D
     printers, laser cutters and VR headsets, and maintained the equipment with a team of 7.
 
-PROJECTS (details at https://markymarklee.github.io/projects/)
+PROJECTS (details at https://markpclee.dev/projects/)
 - Hackathon awards: BlueRobins Newsletter (LAUNCH-A-THON 2026 at Berkeley Haas, one of the top-4 winning
   teams; team of 3, built in 2 days: a Next.js newsletter editor with modular section cards in the
   startup's design, email-safe HTML sent through SendGrid, and an MCP server so Claude can edit the draft

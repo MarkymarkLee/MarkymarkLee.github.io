@@ -1,10 +1,28 @@
 # Site-wide settings. Socials with an empty url are hidden; the icon comes from the url.
-name: Mark Lee # PLACEHOLDER
+name: Mark Lee
 tagline: I help people figure out what's possible, then build it.
-description: Personal site of Mark Lee — CV, projects and writing. # PLACEHOLDER
-url: https://markymarklee.github.io
+description: Mark Lee (Pei Chen Lee) is a software engineer and UC Berkeley M.Eng. EECS student who works with users to find their real problem and build the fix. CV, projects and writing.
+url: https://markpclee.dev
 # Coding skills, shown as tags on the home page.
 skills: [Python, PyTorch, TypeScript, React, Dart, Flutter, Go, SQL, C, C++, "C#", Shell]
+# Extra schema.org Person fields, added to the home page's JSON-LD for search engines and AI answer engines.
+person:
+  alternateName: [Pei Chen Lee, MarkymarkLee]
+  jobTitle: Software Engineer
+  email: mailto:mark.pc.lee@gmail.com
+  alumniOf:
+    - { "@type": CollegeOrUniversity, name: "University of California, Berkeley" }
+    - { "@type": CollegeOrUniversity, name: National Taiwan University }
+  knowsAbout:
+    [
+      Software engineering,
+      Forward-deployed engineering,
+      AI engineering,
+      Robotics,
+      Computer vision,
+      Human-computer interaction,
+      Backend systems,
+    ]
 socials:
   - label: MarkymarkLee
     url: https://github.com/MarkymarkLee
