@@ -12,7 +12,7 @@ M.Eng. in Electrical Engineering & Computer Science
 
 ### National Taiwan University _Sep 2021 – Jan 2026_
 
-B.S. in Computer Science & Information Engineering
+B.S. in Computer Science & Information Engineering · GPA 4.2/4.3, top 1% of the department · 3× Academic Excellence Award
 
 ## Experience
 
@@ -92,8 +92,8 @@ _Sep 2023 – Jun 2025_
 ## Skills
 
 - **Languages:** Mandarin (native), English (fluent; TOEFL 107/120, TOEIC 975/990)
-- **Programming:** Python (PyTorch), TypeScript (React), Dart (Flutter), Golang, SQL, C (C++, C#), shell
-- **Software:** Linux, Unity, Blender, Git (GitHub), GCP, AWS, Docker, Proxmox, n8n, Arduino, Claude
+- **Programming:** Python (PyTorch, NumPy, Django), TypeScript (React, Electron), Dart (Flutter), Golang, SQL, C (C++, C#), shell
+- **Software:** Linux, Unity (incl. multiplayer networking), Blender, Git (GitHub), GCP, AWS, Docker, Postgres, Supabase, Proxmox, n8n, Arduino
 - **Knowledge:** AI, machine learning, computer vision, computer networks, data structures & algorithms
 
 ## Publications
