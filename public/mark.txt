@@ -20,8 +20,13 @@ RESEARCH
 - Embodied AI Lab (Prof. Tsung-Wei Ke), Sep 2025 – Jan 2026: 3D pose estimation, scene generation, robot safety.
 
 WORK
-- Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026). Built a game backend
-  in Go and C# for elderly hospital users, deployed on GCP with CI/CD.
+- Southern Taiwan University of Technology: Backend & Systems Engineer (Apr–Jun 2026).
+  - A custom game with a custom controller, made for elderly-care homes (not a hospital, as the old CV said),
+    that tests residents' grip strength while they play. Residents must be able to play without nurses.
+  - Mark converted it from single-player to multiplayer (Unity + Go server). Built it alone; someone else took it
+    over after he left. Only worked with the professor, never met the users himself.
+  - CI/CD: a simple build script that runs tests, then deploys automatically to a container on GCP. The old CV's
+    "saves 20 minutes per deployment" was never measured.
 - Uni-President Enterprises: Software Engineer & Consultant (Feb–Apr 2026; CV title changed from "AI Automation Engineer & Consultant"). Internal tool for the financial
   department (Mark's dad works there and asked him to help). Their monthly report took a full day of copying and
   pasting between Excel files. Mark built an Electron desktop app: point it at a folder of Excel files, press one

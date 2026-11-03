@@ -20,8 +20,9 @@ B.S. in Computer Science & Information Engineering
 
 _Apr 2026 – Jun 2026_
 
-- Architected a scalable game backend using Golang and C# for 20 elderly users inside a hospital.
-- Deployed on GCP with automated CI/CD deployment pipelines, saving the team 20 minutes per deployment.
+- Converted a grip-strength training game for elderly-care homes from single-player to multiplayer, building the Go game server and the Unity (C#) networking for its custom grip-sensing controller.
+- Kept the game playable without nurse assistance, a core requirement for care-home residents.
+- Sole engineer; set up CI/CD that runs tests and deploys automatically to containers on GCP, then handed the system over to the next engineer.
 
 ### Uni-President Enterprises Corp. — Software Engineer & Consultant
 
