@@ -31,6 +31,11 @@ EXPERIENCE (most recent first)
   - Improving Autolane's dispatching algorithm for automated deliveries and deploying it to multiple
     operators. In progress; no results yet. The client is confidential; do not guess or name it.
 
+- UC Berkeley Deep Tech Innovation Lab, course project, Fall 2026 – present
+  - Assessing the commercial potential of thermodynamic computing with researcher Stephen Whitelam.
+    Interviewed 30+ potential customers and used several market-analysis frameworks to look for niche
+    markets where the technology could win first. In progress.
+
 - Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
   - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.
     The game uses a custom controller that measures grip strength during play. Mark built the Go game
