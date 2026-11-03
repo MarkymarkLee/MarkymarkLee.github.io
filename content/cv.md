@@ -20,7 +20,7 @@ B.S. in Computer Science & Information Engineering · GPA 4.2/4.3, top 1% of the
 
 _Sep 2026 – Present_
 
-- Working with Autolane, an autonomous-delivery startup, to improve its dispatching algorithm and deploy it to multiple operators.
+- Capstone project with Autolane, an autonomous-delivery startup (details confidential).
 
 ### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
