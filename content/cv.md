@@ -22,6 +22,13 @@ _Sep 2026 – Present_
 
 - Working with Autolane, an autonomous-delivery startup, to improve its dispatching algorithm for automated deliveries and deploy it to multiple operators.
 
+### Deep Tech Innovation Lab — Course Project (UC Berkeley)
+
+_Fall 2026 – Present_
+
+- Assessing the commercial potential of thermodynamic computing with researcher Stephen Whitelam.
+- Interviewed 30+ potential customers and applied multiple market-analysis frameworks to find niche markets where the technology could win first.
+
 ### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
 _Apr 2026 – Jun 2026_
