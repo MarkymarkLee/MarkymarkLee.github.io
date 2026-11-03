@@ -32,9 +32,11 @@ EXPERIENCE (most recent first)
     operators. In progress; no results yet. The client is confidential; do not guess or name it.
 
 - UC Berkeley Deep Tech Innovation Lab, course project, Fall 2026 – present
-  - Assessing the commercial potential of thermodynamic computing with researcher Stephen Whitelam.
-    Interviewed 30+ potential customers and used several market-analysis frameworks to look for niche
-    markets where the technology could win first. In progress.
+  - Assessing the commercial potential of thermodynamic computing (research-stage) with Stephen Whitelam,
+    staff scientist at Berkeley Lab's Molecular Foundry. Interviewed 30+ professors, investors, chip
+    companies and robotics and sensing companies, and evaluated markets with TAM/SAM/SOM,
+    jobs-to-be-done, Porter's Five Forces and technology-readiness analysis, looking for niche markets
+    where the technology could win first. In progress; no findings yet.
 
 - Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
   - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.

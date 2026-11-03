@@ -26,8 +26,9 @@ _Sep 2026 – Present_
 
 _Fall 2026 – Present_
 
-- Assessing the commercial potential of thermodynamic computing with researcher Stephen Whitelam.
-- Interviewed 30+ potential customers and applied multiple market-analysis frameworks to find niche markets where the technology could win first.
+- Assessing the commercial potential of thermodynamic computing, a research-stage technology, with Stephen Whitelam (Berkeley Lab).
+- Interviewed 30+ professors, investors, chip companies and robotics and sensing companies to find niche markets where the technology could win first.
+- Evaluated markets with TAM/SAM/SOM, jobs-to-be-done, Porter's Five Forces and technology-readiness analysis.
 
 ### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
