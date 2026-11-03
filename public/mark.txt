@@ -28,8 +28,8 @@ EDUCATION
 
 EXPERIENCE (most recent first)
 - Autolane (autonomous-delivery startup), UC Berkeley M.Eng. capstone project, Sep 2026 – present
-  - Improving the dispatching algorithm for automated Walmart grocery delivery and deploying it to
-    multiple operators with different types of delivery vehicles. In progress; no results yet.
+  - Improving Autolane's dispatching algorithm and deploying it to multiple operators. In progress;
+    no results yet. Client and project details are confidential.
 
 - Southern Taiwan University of Technology, Backend & Systems Engineer (contract), Apr – Jun 2026
   - Converted a grip-strength training game for elderly-care homes from single-player to multiplayer.

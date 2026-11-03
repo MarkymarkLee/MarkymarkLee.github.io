@@ -20,8 +20,7 @@ B.S. in Computer Science & Information Engineering · GPA 4.2/4.3, top 1% of the
 
 _Sep 2026 – Present_
 
-- Working with Autolane, an autonomous-delivery startup, to improve the dispatching algorithm for automated Walmart grocery delivery.
-- Deploying the improved dispatcher to multiple operators running different types of delivery vehicles.
+- Working with Autolane, an autonomous-delivery startup, to improve its dispatching algorithm and deploy it to multiple operators.
 
 ### Southern Taiwan University of Technology — Backend & Systems Engineer (Contract)
 
