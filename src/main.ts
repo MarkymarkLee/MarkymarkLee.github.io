@@ -41,6 +41,7 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>(".socials a, .cv > 
         ready = true;
         a.classList.add("copy-ready");
         toast(`Copied ${text}`);
+        haptic();
       }, HOLD_MS);
     },
     { passive: true },
@@ -60,6 +61,22 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>(".socials a, .cv > 
     "contextmenu",
     (e) => a.classList.contains("copy-ready") && e.preventDefault(),
   );
+}
+
+// A short buzz. Android has navigator.vibrate; iOS Safari has no vibration API, but toggling an
+// iOS 18+ <input switch> plays the system haptic, so click a hidden one.
+// shortcut: the iOS trick is undocumented and may stop working in a future iOS; drop it if it does.
+function haptic() {
+  if (navigator.vibrate?.(15)) return;
+  const label = document.createElement("label");
+  label.style.cssText = "position:fixed;opacity:0;pointer-events:none";
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.setAttribute("switch", "");
+  label.append(input);
+  document.body.append(label);
+  label.click();
+  label.remove();
 }
 
 // One toast at a time: a new message replaces the current one.
