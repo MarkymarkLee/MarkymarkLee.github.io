@@ -58,12 +58,6 @@ const ICONS: [RegExp, string][] = [
     ),
   ],
   [
-    /rss/,
-    svg(
-      '<circle cx="3" cy="13" r="1.5"/><path d="M1.5 7.5a7 7 0 0 1 7 7M1.5 2.5a12 12 0 0 1 12 12" fill="none" stroke="currentColor" stroke-width="1.8"/>',
-    ),
-  ],
-  [
     /^https?:/,
     svg(
       '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c-2.2 2-2.2 11 0 13M8 1.5c2.2 2 2.2 11 0 13"/>',
@@ -177,7 +171,6 @@ function layout(c: Content, a: Assets, p: PageOpts): string {
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="${esc(site.name)}">
-<link rel="alternate" type="application/rss+xml" title="${esc(site.name)}" href="/rss.xml">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:url" content="${site.url}${p.path}">
@@ -198,7 +191,7 @@ ${a.base}${p.home ? a.home : ""}
 <main><div class="wrap">
 ${p.body}
 </div></main>
-<footer class="site-footer"><div class="wrap">© ${new Date().getFullYear()} ${esc(site.name)} · <a href="/rss.xml">RSS</a> · <a href="/mark.txt">Profile for AI agents</a></div></footer>
+<footer class="site-footer"><div class="wrap">© ${new Date().getFullYear()} ${esc(site.name)} · <a href="/mark.txt">Profile for AI agents</a></div></footer>
 </body>
 </html>
 `;
@@ -240,21 +233,6 @@ ${site.skills?.length ? `<p class="label">Skills</p>${tags(site.skills)}` : ""}
 ${latest ? `<p class="label">Latest writing</p><ul class="list">${postItem(latest)}</ul>` : ""}
 </div>
 </div>`;
-}
-
-function rss(c: Content): string {
-  const { site } = c;
-  const items = c.posts
-    .map(
-      (p) =>
-        `<item><title>${esc(p.title)}</title><link>${site.url}/blog/${p.slug}/</link><guid>${site.url}/blog/${p.slug}/</guid><pubDate>${new Date(p.date + "T00:00:00Z").toUTCString()}</pubDate><description>${esc(p.description)}</description></item>`,
-    )
-    .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>${esc(site.name)}</title><link>${site.url}/</link><description>${esc(site.description)}</description>
-${items}
-</channel></rss>
-`;
 }
 
 async function copyAssets(files: Files, dir: string | undefined, to: string) {
@@ -333,7 +311,6 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
     body: `<div class="page-head"><h1>404</h1><p>The slime ate this page. <a href="/">Go home</a>.</p></div>`,
   });
 
-  files.set("rss.xml", rss(c));
   const urls = [...files.keys()]
     .filter((f) => f.endsWith("index.html"))
     .map((f) => `<url><loc>${site.url}/${f.replace(/index\.html$/, "")}</loc></url>`);
