@@ -17,15 +17,21 @@ document.querySelector<HTMLButtonElement>("#theme-toggle")?.addEventListener("cl
 });
 
 // Long-pressing a contact link on a touch screen copies it instead of opening it. After the hold time the
-// link lights up and says "Release to copy"; the copy itself happens on release, because iOS only lets a
-// page write to the clipboard from touchend.
+// link lights up and says "Copied" so you know to let go; the copy itself happens on release, because iOS
+// only lets a page write to the clipboard from touchend. Moving the finger away cancels it.
 const HOLD_MS = 300;
 for (const a of document.querySelectorAll<HTMLAnchorElement>(".socials a, .cv > h1 + ul a")) {
   let ready = false;
   let timer = 0;
+  const text = a.href.replace(/^mailto:/, "");
   const reset = () => {
     clearTimeout(timer);
     a.classList.remove("copy-ready");
+  };
+  const cancel = () => {
+    if (ready) document.querySelector(".toast")?.remove();
+    ready = false;
+    reset();
   };
   a.addEventListener(
     "touchstart",
@@ -34,33 +40,20 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>(".socials a, .cv > 
       timer = window.setTimeout(() => {
         ready = true;
         a.classList.add("copy-ready");
-        toast("Release to copy");
+        toast(`Copied ${text}`);
       }, HOLD_MS);
     },
     { passive: true },
   );
-  a.addEventListener(
-    "touchmove",
-    () => {
-      ready = false;
-      reset();
-    },
-    { passive: true },
-  );
-  a.addEventListener("touchcancel", () => {
-    ready = false;
-    reset();
-  });
+  a.addEventListener("touchmove", cancel, { passive: true });
+  a.addEventListener("touchcancel", cancel);
   a.addEventListener("touchend", (e) => {
     reset();
     if (!ready) return;
     ready = false;
     e.preventDefault(); // don't also open the link
-    const text = a.href.replace(/^mailto:/, "");
-    navigator.clipboard?.writeText(text).then(
-      () => toast(`Copied ${text}`),
-      () => toast("Couldn't copy"),
-    );
+    // The "Copied" message is already showing; only speak up if the copy failed.
+    navigator.clipboard?.writeText(text).catch(() => toast("Couldn't copy"));
   });
   // Android opens a menu on long press; keep desktop right-click as it is.
   a.addEventListener(
