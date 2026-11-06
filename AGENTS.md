@@ -30,6 +30,8 @@ release. Add a tool name to select part of the graph. For example, run
 
 Static personal site, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`. `build/plugin.ts` renders everything in `content/` into HTML pages (served from memory in `vp dev`, written to `dist/` by `vp build`). The home-page slime lives in `src/slime/`.
 
+**Deploys:** after pushing to `main`, don't tell Mark a change is live or ready to use until you have checked that the "Deploy to GitHub Pages" workflow run for that exact commit finished successfully (e.g. with the GitHub Actions tools). If the run failed or you can't check, say so plainly instead.
+
 ## Content layout
 
 - `content/site.yaml` — name, tagline, description, site URL, socials (an empty `url` hides a social).
