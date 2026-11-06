@@ -103,13 +103,11 @@ export function spriteSvg(themed: boolean): string {
 }
 
 // 1200x630 share image: the sprite, big, on Mocha base.
-export function ogPng(): Uint8Array {
-  const W = 1200,
-    H = 630,
-    cell = 26;
+// The slime sprite centred on the dark background, as a PNG: the link-preview image and the iOS home-screen icon.
+export function ogPng(W = 1200, H = 630, cell = 26, dy = 20): Uint8Array {
   const g = spriteGrid(16);
   const ox = (W - 16 * cell) / 2,
-    oy = (H - 16 * cell) / 2 + 20;
+    oy = (H - 16 * cell) / 2 + dy;
   const rgb = SPRITE_HEX.map((h) =>
     h ? [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)) : null,
   );
@@ -176,6 +174,9 @@ function layout(c: Content, a: Assets, p: PageOpts): string {
 <meta name="description" content="${esc(p.description)}">
 <link rel="canonical" href="${site.url}${p.path}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="${esc(site.name)}">
 <link rel="alternate" type="application/rss+xml" title="${esc(site.name)}" href="/rss.xml">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(p.description)}">
@@ -351,5 +352,19 @@ export async function renderSite(c: Content, a: Assets): Promise<Files> {
   );
   files.set("favicon.svg", spriteSvg(false));
   files.set("og.png", ogPng());
+  files.set("apple-touch-icon.png", ogPng(180, 180, 9, -9));
+  // Home-screen installs open on the home page, whichever page they were added from.
+  files.set(
+    "manifest.webmanifest",
+    JSON.stringify({
+      name: site.name,
+      short_name: site.name,
+      start_url: "/",
+      display: "standalone",
+      background_color: "#1e1e2e",
+      theme_color: "#1e1e2e",
+      icons: [{ src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    }),
+  );
   return files;
 }
