@@ -287,6 +287,27 @@ main {
   padding: 4px 12px;
   box-shadow: 3px 3px 0 var(--crust);
 }
+.socials a,
+.cv > h1 + ul a {
+  /* No iOS link menu or text selection on long press; main.ts copies the link instead. */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  max-width: calc(100% - 32px);
+  z-index: 20;
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--base);
+  background: var(--text);
+  overflow-wrap: anywhere;
+}
 .socials a:hover {
   border-color: var(--blue);
   color: var(--blue);
