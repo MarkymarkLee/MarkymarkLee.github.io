@@ -294,6 +294,12 @@ main {
   -webkit-user-select: none;
   user-select: none;
 }
+.socials a.copy-ready,
+.cv > h1 + ul a.copy-ready {
+  color: var(--base);
+  background: var(--blue);
+  border-color: var(--blue);
+}
 .toast {
   position: fixed;
   left: 50%;
