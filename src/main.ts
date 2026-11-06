@@ -22,7 +22,7 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>(".socials a, .cv > 
   a.addEventListener("touchstart", () => (start = Date.now()), { passive: true });
   a.addEventListener("touchmove", () => (start = 0), { passive: true });
   a.addEventListener("touchend", (e) => {
-    const held = start && Date.now() - start >= 500;
+    const held = start && Date.now() - start >= 300;
     start = 0;
     if (!held) return;
     e.preventDefault(); // don't also open the link

@@ -47,7 +47,7 @@ Static personal site, deployed to GitHub Pages by `.github/workflows/deploy.yml`
    ---
    title: Post title # required
    date: 2026-10-20 # required, YYYY-MM-DD
-   description: One sentence for the list, RSS and link previews.
+   description: One sentence for the list and link previews.
    tags: [tag-one, tag-two]
    draft: true # leave true while writing; remove (or false) to publish
    ---
