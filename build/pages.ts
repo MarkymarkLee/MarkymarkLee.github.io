@@ -228,7 +228,6 @@ function homePage(c: Content): string {
         `<li><a href="${esc(s.url)}" rel="me noopener">${iconFor(s.url)}${esc(s.label)}</a></li>`,
     )
     .join("");
-  const latest = c.posts[0];
   return `<div class="home">
 <div class="slime-box"><span class="hint">drag &amp; throw me</span><canvas id="slime" aria-label="A pixel slime you can drag and throw" role="img"></canvas></div>
 <div class="intro">
@@ -236,7 +235,6 @@ function homePage(c: Content): string {
 <p class="tagline">${esc(site.tagline)}</p>
 <ul class="socials">${socials}</ul>
 ${site.skills?.length ? `<p class="label">Skills</p>${tags(site.skills)}` : ""}
-${latest ? `<p class="label">Latest writing</p><ul class="list">${postItem(latest)}</ul>` : ""}
 </div>
 </div>`;
 }
