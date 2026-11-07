@@ -85,7 +85,9 @@ function personJsonLd(site: Content["site"]): string {
     name: site.name,
     url: site.url,
     description: site.description,
-    sameAs: site.socials.map((s) => s.url).filter((u) => u.startsWith("http")),
+    sameAs: site.socials
+      .map((s) => s.url)
+      .filter((u) => u.startsWith("http") && !u.startsWith(site.url)),
     ...site.person,
   };
   return `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
